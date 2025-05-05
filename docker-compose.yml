@@ -63,6 +63,34 @@ services:
     depends_on:
       - mongodb
 
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_SERVER ID: 1        # ID của Zookeeper trong cluster (nếu có nhiều node Zookeeper)
+      ZOOKEEPER_CLIENT_PORT: 2181     # Port mà client sẽ kết nối tới Zookeeper
+      ZOOKEEPER_TICK_TIME: 2000       # Thời gian tick (mỗi tick là một đơn vị thời gian cho Zookeeper)
+    ports:
+      - 22181:2181
+    networks:
+      - microservices-net
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: ms_kafka
+    ports:
+      - 9092:9092
+    depends_on:
+      - zookeeper        # Kafka phụ thuộc vào Zookeeper để khởi động
+    environment:
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1   # Số lượng bản sao cho topic lưu offset
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT   # Giao thức bảo mật
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092    #client sẽ kết nối tới Kafka qua localhost:9092
+    networks:
+      - microservices-net
+
   mail-dev:
     container_name: ms_mail_dev
     image: maildev/maildev
