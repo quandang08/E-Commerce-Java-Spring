@@ -1,0 +1,15 @@
+[submodule "services/config-server"]
+	path = services/config-server
+	url = https://github.com/quandang08/config-server.git
+[submodule "services/discovery"]
+	path = services/discovery
+	url = https://github.com/quandang08/discovery-server-ecommerce.git
+[submodule "services/product"]
+	path = services/product
+	url = https://github.com/quandang08/product-service.git
+[submodule "services/customer"]
+	path = services/customer
+	url = https://github.com/quandang08/customer.git
+[submodule "services/order"]
+	path = services/order
+	url = https://github.com/quandang08/order-service.git
