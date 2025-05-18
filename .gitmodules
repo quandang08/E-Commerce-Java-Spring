@@ -13,3 +13,9 @@
 [submodule "services/order"]
 	path = services/order
 	url = https://github.com/quandang08/order-service.git
+[submodule "services/payment"]
+	path = services/payment
+	url = https://github.com/quandang08/payment-service.git
+[submodule "services/notification"]
+	path = services/notification
+	url = https://github.com/quandang08/Notification-Service.git
