@@ -1,0 +1,3 @@
+[submodule "services/gateway"]
+	path = services/gateway
+	url = https://github.com/quandang08/gateway-ecommerce.git

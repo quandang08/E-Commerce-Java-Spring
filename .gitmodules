@@ -19,3 +19,6 @@
 [submodule "services/notification"]
 	path = services/notification
 	url = https://github.com/quandang08/Notification-Service.git
+[submodule "services/gateway"]
+	path = services/gateway
+	url = https://github.com/quandang08/gateway-ecommerce.git
