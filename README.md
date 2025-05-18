@@ -3,15 +3,12 @@ E-Commerence-Java-Spring
 E-Commerence-Java-Spring is a modern e-commerce platform built with Java Spring and Microservices Architecture. It leverages technologies like Spring Boot, Spring Cloud, Docker, Kubernetes, and more, enabling scalability and maintainability across services.
 
 🚀 Key Features
-Product Management: Add, update, and delete products.
 
 Order Processing: Automate order lifecycle from creation to delivery.
 
 Payment Integration: Secure payment methods for users.
 
 Customer Management: Manage customer accounts and order tracking.
-
-Cart Management: Quick checkout and cart management.
 
 Transaction Handling: Distributed transactions for secure payments.
 
@@ -48,7 +45,8 @@ MySQL & PostgreSQL for data storage
 Zipkin for monitoring
 
 
-🌐 Deployment
+
+🌐 Deployment (Status => Plainning)
 Docker containers for easy setup and scaling
 
 CI/CD using Jenkins/GitHub Actions for continuous integration
