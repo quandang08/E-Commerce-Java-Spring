@@ -20,7 +20,7 @@ Automated Notifications: Email/SMS notifications for order status updates.
 🖥 Architecture
 The system uses Microservices Architecture with core services like:
 
-Auth Service: User authentication and access management.
+Customer Service: User authentication and access management.
 
 Product Service: Manages products and categories.
 
@@ -37,31 +37,24 @@ Config Server: Centralized configuration.
 ⚙ Technologies Used
 Spring Boot and Spring Cloud
 
-OAuth2 & JWT for security
+Spring Security
 
-Docker & Kubernetes for containerization and orchestration
+Docker for containerization and orchestration
 
 Kafka for inter-service communication
 
 MySQL & PostgreSQL for data storage
 
-Redis for caching
+Zipkin for monitoring
 
-Prometheus & Grafana for monitoring
-
-JUnit & Mockito for testing
-
-SonarQube for code quality
 
 🌐 Deployment
 Docker containers for easy setup and scaling
 
-Kubernetes for orchestration and auto-scaling
-
 CI/CD using Jenkins/GitHub Actions for continuous integration
 
 📊 Monitoring & Logging
-Prometheus & Grafana for health monitoring
+Zipkin for health monitoring
 
 ELK Stack for log analysis and troubleshooting
 
